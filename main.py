@@ -22,8 +22,8 @@ elif command1 == 'help!':
     print('open browser spotify, open browser stackoverflow, close, quit, open browser java, open browser jdk')
     print('gmail login, close, move file, download c#, download donut, download unity c#, open browser gmail')
     print("open browser fiverr, open browser itch, open browser blender, copy file, creator, who is your creator")
-    print("choose random num, choose random number")
-    input('press any key to end the program')
+    print("choose random num, choose random number, read file, write file, open new file")
+    input('press any key to end the program, ')
 
 elif command1 == 'creator':
     print('Made by Abhijeet Prabhakar')
@@ -174,9 +174,10 @@ elif command1 == "write file":
     print(file.write(text2))
     input(exit1)
 
-elif command1 == "open file":
-    openfile1 = input('input your file name')
-    file = open(openfile1,"w")
+#elif command1 == "open file":
+    #openfile1 = input('input your file name')
+    #file = open(openfile1,"w")
+    #input(exit1)
 
 elif command1 == "open new file":
     opennewfile = input('input your new file name')
@@ -193,6 +194,7 @@ elif command1 == "quit":
 else:
     print("Please type the write command/",command1,error1)
     print("type help! to see all commands")
+    print(thankyou)
     input('press any key to close')
     quit()
 
