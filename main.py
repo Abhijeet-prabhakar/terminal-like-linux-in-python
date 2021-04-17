@@ -1,12 +1,16 @@
 import webbrowser
 import shutil
+import random
+import os
 error1 = ":Command not found"
 thankyou = "thanks for using me :), made by abhijeet prabhakar"
 java1 = "java download"
 python1 = "python download"
 help1 = "type help! to see all commands"
 duh1 = 'r'
+exit1 = "press any key to close"
 
+print("type 'help!' to see all commands :)")
 command1 = input("add a command:")
 if command1 == "open browser":
     webbrowser.open('https://www.bing.com', new=1)
@@ -18,6 +22,7 @@ elif command1 == 'help!':
     print('open browser spotify, open browser stackoverflow, close, quit, open browser java, open browser jdk')
     print('gmail login, close, move file, download c#, download donut, download unity c#, open browser gmail')
     print("open browser fiverr, open browser itch, open browser blender, copy file, creator, who is your creator")
+    print("choose random num, choose random number")
     input('press any key to end the program')
 
 elif command1 == 'creator':
@@ -134,6 +139,33 @@ elif command1 == "copy file":
 elif command1 == "close":
     print(thankyou)
     quit()
+
+elif command1 == "choose random num":
+    print(random.randrange(1, 1000000))
+    print("tadha i am good at maths boiiiii")
+    print(help1)
+    print(thankyou)
+    print(help1)
+    input('press any key then enter to exit')
+
+elif command1 == "choose random number":
+    random_num1 = input("add first number:")
+    random_num2 = input("add second number:")
+    random_num3 = input("add third number:")
+    random_num4 = input("add fourth number")
+    random_num5 = input("add fifth num")
+    list = [random_num1, random_num2, random_num3, random_num4, random_num5]
+    random_number = random.choice(list)
+    print(random_number)
+    print(thankyou)
+    print(help1)
+    input(exit1)
+
+elif command1 == "read file":
+    readfile1 = input('input file name:')
+    file = open(readfile1)
+    print(file.read())
+    input(exit1)
 
 elif command1 == "close": #to close the program
     print("thanks for using me :), made by abhijeet prabhakar")
