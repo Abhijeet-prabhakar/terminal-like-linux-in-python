@@ -16,7 +16,7 @@ if command1 == "open browser":
 elif command1 == 'help!':
     print('commands: python download, java download, open browser, open browser youtube, open browser github')
     print('open browser spotify, open browser stackoverflow, close, quit, open browser java, open browser jdk')
-    print('download c#, download donut, download unity c#, open browser gmail')
+    print('close, move file, download c#, download donut, download unity c#, open browser gmail')
 
 elif command1 == 'open browser youtube':
     webbrowser.open_new_tab('https://www.youtube.com')
@@ -109,6 +109,10 @@ elif command1 == "move file":
     shutil.move(origin1,target1)
     print(thankyou)
     print(help1)
+
+elif command1 == "close":
+    print(thankyou)
+    quit()
 
 elif command1 == "close": #to close the program
     print("thanks for using me :), made by abhijeet prabhakar")
