@@ -167,6 +167,13 @@ elif command1 == "read file":
     print(file.read())
     input(exit1)
 
+elif command1 == "write file":
+    writefile1 = input('input file name:')
+    text2 = input('input what you wanna write in that file:')
+    file = open(writefile1,"w")
+    print(file.write(text2))
+    input(exit1)
+
 elif command1 == "close": #to close the program
     print("thanks for using me :), made by abhijeet prabhakar")
     quit()
