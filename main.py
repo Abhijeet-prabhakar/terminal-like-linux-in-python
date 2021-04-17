@@ -174,6 +174,14 @@ elif command1 == "write file":
     print(file.write(text2))
     input(exit1)
 
+elif command1 == "open file":
+    openfile1 = input('input your file name')
+    file = open(openfile1,"w")
+
+elif command1 == "open new file":
+    opennewfile = input('input your new file name')
+    file = open(opennewfile,"w")
+
 elif command1 == "close": #to close the program
     print("thanks for using me :), made by abhijeet prabhakar")
     quit()
