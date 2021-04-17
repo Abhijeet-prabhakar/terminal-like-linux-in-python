@@ -16,7 +16,19 @@ if command1 == "open browser":
 elif command1 == 'help!':
     print('commands: python download, java download, open browser, open browser youtube, open browser github')
     print('open browser spotify, open browser stackoverflow, close, quit, open browser java, open browser jdk')
-    print('close, move file, download c#, download donut, download unity c#, open browser gmail')
+    print('gmail login, close, move file, download c#, download donut, download unity c#, open browser gmail')
+    print("open browser fiverr, open browser itch, open browser blender, copy file, creator, who is your creator")
+    input('press any key to end the program')
+
+elif command1 == 'creator':
+    print('Made by Abhijeet Prabhakar')
+    input('press any key to exit')
+    quit()
+
+elif command1 == 'who is your creator':
+    print('Made by Abhijeet Prabhakar')
+    input('press any key to exit')
+    quit()
 
 elif command1 == 'open browser youtube':
     webbrowser.open_new_tab('https://www.youtube.com')
@@ -109,6 +121,15 @@ elif command1 == "move file":
     shutil.move(origin1,target1)
     print(thankyou)
     print(help1)
+    input('press any key to exit')
+
+elif command1 == "copy file":
+    origin2 = input('origin:')
+    target2 = input('target:')
+    shutil.copy(origin2, target2)
+    print(thankyou)
+    print(help1)
+    input('press any key to exit')
 
 elif command1 == "close":
     print(thankyou)
@@ -125,6 +146,7 @@ elif command1 == "quit":
 else:
     print("Please type the write command/",command1,error1)
     print("type help! to see all commands")
+    input('press any key to close')
     quit()
 
 
