@@ -22,7 +22,7 @@ elif command1 == 'help!':
     print('open browser spotify, open browser stackoverflow, close, quit, open browser java, open browser jdk')
     print('gmail login, close, move file, download c#, download donut, download unity c#, open browser gmail')
     print("open browser fiverr, open browser itch, open browser blender, copy file, creator, who is your creator")
-    print("choose random num, choose random number, read file, write file, open new file")
+    print("choose random num, choose random number, read file, write file, open new file, delete file")
     input('press any key to end the program, ')
 
 elif command1 == 'creator':
@@ -143,7 +143,7 @@ elif command1 == "close":
 elif command1 == "choose random num":
     print(random.randrange(1, 1000000))
     print("tadha i am good at maths boiiiii")
-    print(help1)
+   #print(help1)
     print(thankyou)
     print(help1)
     input('press any key then enter to exit')
@@ -182,6 +182,17 @@ elif command1 == "write file":
 elif command1 == "open new file":
     opennewfile = input('input your new file name')
     file = open(opennewfile,"w")
+
+elif command1 == "delete file":
+    deletefile1 = input("enter the file/folder path:")
+    os.remove(deletefile1)
+    print('process was success')
+    input(exit1)
+
+elif command1 == "rename file":
+    oldfilename = input('enter the old file name')
+    newfilename = input('enter the new file name')
+    os.rename(oldfilename,newfilename)
 
 elif command1 == "close": #to close the program
     print("thanks for using me :), made by abhijeet prabhakar")
