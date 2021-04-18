@@ -197,6 +197,13 @@ elif command1 == "delete folder":
     print("process was successful")
     input(exit1)
 
+#elif command1 == "rename folder":
+    #renamefolder = input("enter the old name of the folder:")
+    #renamefolder2 = input('enter the new folder name')
+    #os.rename(renamefolder,renamefolder2)
+    #print('process was success:)')
+    #input(exit1)
+
 elif command1 == "delete file":
     deletefile1 = input("enter the file path:")
     os.remove(deletefile1)
@@ -210,8 +217,7 @@ elif command1 == "close": #to close the program
 elif command1 == "quit":
     print(thankyou)
     quit()
-
-
+#D:\pythonterminalproject\Lib\main.py
 elif command1 == "rename file":
     oldfilename = input('enter the old file name:')
     newfilename = input('enter the new file name:')
@@ -219,25 +225,25 @@ elif command1 == "rename file":
     print('process was a success')
     input(exit1)
 
-elif command1 == "mail a person":
-    sender_mail = input("add your email/add the sender email:")
-    target_mail = input("add the email in which you will send the mail:")
-    password = input(str("please enter your password:"))
-    message = input("please input your message:")
-server = smtplib.SMTP('smtp.gmail.com', 587)
-server.starttls()
-server.login(sender_mail,password)
-print("login success")
-server.sendmail(sender_mail, target_mail, message)
-print("the email was successfully send to",target_mail)
-input(exit1)
-exit()
+#elif command1 == "mail a person":
+    #sender_mail = input("add your email/add the sender email:")
+    #target_mail = input("add the email in which you will send the mail:")
+    #password = input(str("please enter your password:"))
+    #message = input("please input your message:")
+#server = smtplib.SMTP('smtp.gmail.com', 587)
+#server.starttls()
+#server.login(sender_mail,password)
+#print("login success")
+#server.sendmail(sender_mail, target_mail, message)
+#print("the email was successfully send to",target_mail)
+#input(exit1)
+#exit()
 
-#else:
-    #print("Please type the write command/",command1,error1)
-    #print("type help! to see all commands")
-    #print(thankyou)
-    #input('press any key to close')
-    #quit()
+else:
+    print("Please type the write command/",command1,error1)
+    print("type help! to see all commands")
+    print(thankyou)
+    input('press any key to close')
+    quit()
 
 
