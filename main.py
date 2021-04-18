@@ -25,7 +25,7 @@ elif command1 == 'help!':
     print('gmail login, close, move file, download c#, download donut, download unity c#, open browser gmail')
     print("open browser fiverr, open browser itch, open browser blender, copy file, creator, who is your creator")
     print("choose random num, choose random number, read file, write file, open new file, delete file, rename file")
-    print("mail a person")
+    print("mail a person, open new folder, delete folder")
     input('press any key to end the program, ')
 
 elif command1 == 'creator':
@@ -155,8 +155,8 @@ elif command1 == "choose random number":
     random_num1 = input("add first number:")
     random_num2 = input("add second number:")
     random_num3 = input("add third number:")
-    random_num4 = input("add fourth number")
-    random_num5 = input("add fifth num")
+    random_num4 = input("add fourth number:")
+    random_num5 = input("add fifth number:")
     list = [random_num1, random_num2, random_num3, random_num4, random_num5]
     random_number = random.choice(list)
     print(random_number)
@@ -183,11 +183,22 @@ elif command1 == "write file":
     #input(exit1)
 
 elif command1 == "open new file":
-    opennewfile = input('input your new file name')
+    opennewfile = input('input your new file name:')
     file = open(opennewfile,"w")
 
+elif command1 == "open new folder":
+    print("please enter in where you want your folder to be for exaple D:\\New folder")
+    opennewfolder = input("please enter the new folder path:")
+    os.makedirs(opennewfolder)
+
+elif command1 == "delete folder":
+    deletefolder = input("enter the folder path:")
+    os.remove(deletefolder)
+    print("process was successful")
+    input(exit1)
+
 elif command1 == "delete file":
-    deletefile1 = input("enter the file/folder path:")
+    deletefile1 = input("enter the file path:")
     os.remove(deletefile1)
     print('process was success')
     input(exit1)
@@ -202,8 +213,8 @@ elif command1 == "quit":
 
 
 elif command1 == "rename file":
-    oldfilename = input('enter the old file name')
-    newfilename = input('enter the new file name')
+    oldfilename = input('enter the old file name:')
+    newfilename = input('enter the new file name:')
     os.rename(oldfilename,newfilename)
     print('process was a success')
     input(exit1)
@@ -211,15 +222,16 @@ elif command1 == "rename file":
 elif command1 == "mail a person":
     sender_mail = input("add your email/add the sender email:")
     target_mail = input("add the email in which you will send the mail:")
-    password = input(str("please enter your password"))
-    message = input("please input your message")
+    password = input(str("please enter your password:"))
+    message = input("please input your message:")
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
 server.login(sender_mail,password)
 print("login success")
 server.sendmail(sender_mail, target_mail, message)
 print("the email was successfully send to",target_mail)
-quit()
+input(exit1)
+exit()
 
 #else:
     #print("Please type the write command/",command1,error1)
